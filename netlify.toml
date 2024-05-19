@@ -1,0 +1,5 @@
+[[redirects]]
+  # Redirect all requests to non-existent files to index.html
+  from = "/*"
+  to = "/index.html"
+  status = 200
