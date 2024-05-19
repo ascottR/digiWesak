@@ -24,6 +24,12 @@ export default function Landing() {
       name: "Acasia",
       desc: "This is a description for Card 3. It gives more details about the card.",
     },
+    {
+      image:
+        "https://tenor.com/en-GB/view/happy-birthday-buddha-buddha-बुद्धजयन्ती-วิสาขบูชา-buddha-purnima-gif-21610356",
+      name: "Tenor",
+      desc: "This is a description for Card 4. It gives more details about the card.",
+    },
   ];
 
   return (
@@ -40,7 +46,6 @@ export default function Landing() {
               title={card.name}
               description={card.desc}
               onSelect={() => setSelectedCard(card)}
-              className="m-4" // Add margin here
             />
           ))}
         </div>
