@@ -24,17 +24,11 @@ export default function Landing() {
       name: "Acasia",
       desc: "This is a description for Card 3. It gives more details about the card.",
     },
-    {
-      image:
-        "https://tenor.com/en-GB/view/happy-birthday-buddha-buddha-बुद्धजयन्ती-วิสาขบูชา-buddha-purnima-gif-21610356",
-      name: "Tenor",
-      desc: "This is a description for Card 4. It gives more details about the card.",
-    },
   ];
 
   return (
     <div>
-      <h1 className="text-center text-3xl mt-6 font-bold">
+      <h1 className="text-center text-3xl mt-8 font-bold">
         All Wesak Card Templates
       </h1>
       <section className="px-2 py-6 sm:px-4 sm:py-12 container mx-auto">

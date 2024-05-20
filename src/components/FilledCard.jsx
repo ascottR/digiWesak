@@ -34,12 +34,21 @@ function FilledCard() {
 
     setTimeout(() => {
       setMusicPlaying(true);
-    }, 1500); // Start playing music after 0.5 seconds
+    }, 1000); // Start playing music after 0.5 seconds
   }
 
   return (
-    <div className="flex items-center justify-center h-screen w-screen">
-      <div id="envelope">
+    <div className="relative flex items-center justify-center h-screen w-screen">
+      <div className="topbtn absolute top-4 right-4">
+        <a
+          href="/"
+          className=" text-charcoal-blue px-4 py-2  cursor-pointer inline-flex items-center relative overflow-hidden"
+        >
+          <span>Make Your Own Digital Wesak Card</span>
+          <span className="absolute top-0 right-0 bg-blue-500 w-3 h-3 rounded-full animate-ping"></span>
+        </a>
+      </div>
+      <div id="envelope" className="relative">
         <div id="back">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -107,9 +116,20 @@ function FilledCard() {
         </div>
         <button
           onClick={openUp}
-          className="bg-gold rounded-full w-12 h-12 font-bold text-white text-center cursor-pointer transition-transform transition-colors duration-800 hover:bg-pink transform hover:scale-150"
+          className="bg-gold rounded-full w-12 h-12 cursor-pointer transition-transform transition-colors duration-800 hover:bg-pink transform hover:scale-150 absolute top-4 right-4"
         >
-          Click Here
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            className="text-white"
+          >
+            <path
+              fillRule="evenodd"
+              d="M10 3a7 7 0 100 14 7 7 0 000-14zM9 6a1 1 0 00-1 1v4.586L5.707 9.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l4-4a1 1 0 00-1.414-1.414L10 11.586V7a1 1 0 00-1-1z"
+              clipRule="evenodd"
+            />
+          </svg>
         </button>
         {musicPlaying && (
           <audio autoPlay>
