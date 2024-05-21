@@ -6,9 +6,27 @@ function CardForm({ card, onClose }) {
   const [from, setFrom] = useState("");
   const [message, setMessage] = useState("");
   const [generatedLink, setGeneratedLink] = useState("");
+  const [toError, setToError] = useState(false);
+  const [fromError, setFromError] = useState(false);
+  const [messageError, setMessageError] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (to.length > 25) {
+      setToError(true);
+      return;
+    }
+    if (from.length > 25) {
+      setFromError(true);
+      return;
+    }
+    if (
+      message.split("\n").some((line) => line.length > 25) ||
+      message.split("\n").length > 6
+    ) {
+      setMessageError(true);
+      return;
+    }
     const uniqueLink = `${
       window.location.origin
     }/cards?image=${encodeURIComponent(card.image)}&to=${encodeURIComponent(
@@ -28,6 +46,30 @@ function CardForm({ card, onClose }) {
         console.error("Failed to copy: ", err);
       });
   };
+  const handleToChange = (e) => {
+    const input = e.target.value;
+    if (input.length <= 25) {
+      setToError(false);
+      setTo(input);
+    } else {
+      setToError(true);
+    }
+  };
+  const handleMessageChange = (e) => {
+    const input = e.target.value;
+    const lines = input
+      .split("\n")
+      .map((line) => {
+        return line.length > 25 ? line.match(/.{1,25}/g).join("\n") : line;
+      })
+      .join("\n");
+    if (lines.split("\n").length <= 6) {
+      setMessageError(false);
+      setMessage(lines);
+    } else {
+      setMessageError(true);
+    }
+  };
 
   return (
     <div className="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center">
@@ -38,30 +80,57 @@ function CardForm({ card, onClose }) {
             <label className="block text-gray-700">To:</label>
             <input
               type="text"
-              className="w-full p-2 border border-gray-300 rounded"
+              className={`w-full p-2 border ${
+                toError ? "border-red-500" : "border-gray-300"
+              } rounded`}
               value={to}
-              onChange={(e) => setTo(e.target.value)}
+              onChange={handleToChange}
+              maxLength={25}
               required
             />
+            {toError && (
+              <p className="text-red-500 text-xs mt-1">Max 25 characters</p>
+            )}
           </div>
           <div className="mb-4">
             <label className="block text-gray-700">From:</label>
             <input
               type="text"
-              className="w-full p-2 border border-gray-300 rounded"
+              className={`w-full p-2 border ${
+                fromError ? "border-red-500" : "border-gray-300"
+              } rounded`}
               value={from}
-              onChange={(e) => setFrom(e.target.value)}
+              onChange={(e) => {
+                setFrom(e.target.value);
+                if (e.target.value.length <= 25) {
+                  setFromError(false);
+                } else {
+                  setFromError(true);
+                }
+              }}
+              maxLength={25}
               required
             />
+            {fromError && (
+              <p className="text-red-500 text-xs mt-1">Max 25 characters</p>
+            )}
           </div>
           <div className="mb-4">
             <label className="block text-gray-700">Message:</label>
             <textarea
-              className="w-full p-2 border border-gray-300 rounded"
+              className={`w-full p-2 border ${
+                messageError ? "border-red-500" : "border-gray-300"
+              } rounded`}
               value={message}
-              onChange={(e) => setMessage(e.target.value)}
+              onChange={handleMessageChange}
               required
+              rows={6} // Set rows to 6 for maximum 6 lines
             ></textarea>
+            {messageError && (
+              <p className="text-red-500 text-xs mt-1">
+                Max 6 lines, each with max 25 characters.
+              </p>
+            )}
           </div>
           <div className="flex justify-between">
             <button

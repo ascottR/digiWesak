@@ -34,7 +34,7 @@ function FilledCard() {
 
     setTimeout(() => {
       setMusicPlaying(true);
-    }, 1000); // Start playing music after 0.5 seconds
+    }, 1000); // Start playing music after 1S seconds
   }
 
   return (
@@ -102,15 +102,20 @@ function FilledCard() {
           <div className="w-3/5">
             <img src={image} alt=" inset-0 w-full h-full object-cover" />
           </div>
-          <div className="w-2/5 p-1">
-            <p className="font-serif text-xl mb-4 text-zinc-800">
-              To: <b>{to}</b>
+
+          <div className="w-2/5 p-8 m-2  font-mono text-lg text-zinc-800 border-2 border-dashed hfull-minus-1rem-ccss  border-blue-950">
+            <p className="mb-4 ">
+              <b>From: </b>
+              {from}
             </p>
-            <p className="font-serif text-xl mb-4 text-zinc-800">
-              From: <b>{from}</b>
+            <p className=" mb-4">
+              <b>TO: </b>
+              {to}
             </p>
-            <p className="font-serif text-base mb-4 text-gray-800">
-              Message: {message}
+            <p className=" mb-4">
+              <b>Message:</b>
+              <br />
+              {message}
             </p>
           </div>
         </div>

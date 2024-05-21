@@ -10,7 +10,8 @@ module.exports = {
         "mellow-apricot": "#ffb961",
         teal: "#008080",
         coral: "#FF7F50",
-        yellrange: "#ffd73e33", // Note: This color includes transparency
+        yellrange: "#ffd73e33",
+        blueborder: "#003049",
       },
     },
   },
