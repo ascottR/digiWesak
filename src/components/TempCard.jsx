@@ -5,7 +5,7 @@ function TempCard(props) {
     <div className="max-w-sm mt-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       <a href="#">
         <img
-          className="rounded-t-lg w-full sm:h-96 h-64"
+          className="rounded-t-lg w-full h-96 "
           src={props.img}
           alt={props.title}
         />
@@ -21,7 +21,7 @@ function TempCard(props) {
         </p>
         <button
           onClick={props.onSelect}
-          className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-purple-800 rounded-lg hover:bg-purple-950 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:bg-purple-700 dark:hover:bg-purple-950 dark:focus:ring-purple-950"
         >
           Choose
           <svg

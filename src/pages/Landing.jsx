@@ -28,7 +28,7 @@ export default function Landing() {
 
   return (
     <div>
-      <h1 className="text-center text-3xl mt-8 font-bold">
+      <h1 className="text-center text-purple-950 text-2xl sm:text-3xl mt-8 font-bold">
         All Wesak Card Templates
       </h1>
       <section className="px-2 py-6 sm:px-4 sm:py-12 container mx-auto">

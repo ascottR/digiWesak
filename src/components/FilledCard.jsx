@@ -19,6 +19,7 @@ function FilledCard() {
     const $opentop = document.querySelector("#opentop");
     const $top = document.querySelector("#top");
     const $front = document.querySelector("#front");
+    const $front2 = document.querySelector("#front2");
     const $back = document.querySelector("#back");
     const $letter = document.querySelector("#letter");
     const $button = document.querySelector("button");
@@ -28,6 +29,7 @@ function FilledCard() {
 
     $top.classList.add("animate");
     $front.classList.add("animate");
+    $front2.classList.add("animate");
     $back.classList.add("animate");
     $button.classList.add("animate");
     $letter.classList.add("animate");
@@ -42,49 +44,62 @@ function FilledCard() {
       <div className="topbtn absolute top-4 right-4">
         <a
           href="/"
-          className=" text-charcoal-blue px-4 py-2  cursor-pointer inline-flex items-center relative overflow-hidden"
+          className="text-charcoal-blue px-4 py-2 cursor-pointer inline-flex items-center relative overflow-hidden"
         >
           <span>Make Your Own Digital Wesak Card</span>
-          <span className="absolute top-0 right-0 bg-blue-500 w-3 h-3 rounded-full animate-ping"></span>
+          <span className="absolute top-0 right-0 bg-purple-500 w-3 h-3 rounded-full animate-ping"></span>
         </a>
       </div>
       <div id="envelope" className="relative">
         <div id="back">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
-            height="500"
-            width="800"
+            height="100%"
+            width="100%"
+            viewBox="0 0 800 500"
           >
             <polygon
               points="0,100 800,100 800,500 0,500"
-              className="fill-current text-gray-700 stroke-none"
+              className="fill-current text-purple-950"
             />
           </svg>
         </div>
         <div id="front">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
-            height="500"
-            width="800"
+            height="100%"
+            width="100%"
+            viewBox="0 0 800 500"
           >
             <polygon
-              points="0,100 400,200 800,100 800,500 0,500"
-              className="fill-current text-gray-700 stroke-gray-700-200 stroke-3"
+              points="0,100 400,300 800,100 800,500 0,500"
+              className="fill-current text-purple-700"
+            />
+          </svg>
+        </div>
+        <div id="front2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="100%"
+            width="100%"
+            viewBox="0 0 800 500"
+          >
+            <polygon
+              points="0,100 400,300 0,500"
+              className="fill-current text-purple-800"
             />
           </svg>
         </div>
         <div id="top">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
-            height="400"
-            width="800"
+            height="100%"
+            width="100%"
+            viewBox="0 0 800 500"
           >
             <polygon
-              points="0,100 400,250 800,100"
-              className="fill-current text-gray-700 stroke-purple-200 stroke-2"
+              points="0,100 400,300 800,100"
+              className="fill-current text-purple-950"
             >
               <animate
                 id="opentop"
@@ -103,16 +118,16 @@ function FilledCard() {
             <img src={image} alt=" inset-0 w-full h-full object-cover" />
           </div>
 
-          <div className="w-2/5 p-8 m-2  font-mono text-lg text-zinc-800 border-2 border-dashed hfull-minus-1rem-ccss  border-blue-950">
-            <p className="mb-4 ">
+          <div className="w-2/5 p-2  md:p-4 m-1 md:m-2 font-mono text-xs md:text-lg  text-zinc-800 border-2 border-dashed hfull-minus-1rem-ccss border-purple-950">
+            <p className="mb-1 sm:mb-4 ">
               <b>From: </b>
               {from}
             </p>
-            <p className=" mb-4">
+            <p className="mb-1 sm:mb-4">
               <b>TO: </b>
               {to}
             </p>
-            <p className=" mb-4">
+            <p className=" mb-1">
               <b>Message:</b>
               <br />
               {message}
@@ -121,7 +136,7 @@ function FilledCard() {
         </div>
         <button
           onClick={openUp}
-          className="bg-gold rounded-full w-12 h-12 cursor-pointer transition-transform transition-colors duration-800 hover:bg-pink transform hover:scale-150 absolute top-4 right-4"
+          className="rounded-full w-12 h-12 cursor-pointer transition-transform transition-colors duration-800 hover:bg-pink transform hover:scale-150 absolute top-4 right-4"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

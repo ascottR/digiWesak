@@ -142,7 +142,7 @@ function CardForm({ card, onClose }) {
             </button>
             <button
               type="submit"
-              className="px-4 py-2 bg-blue-700 text-white rounded"
+              className="px-4 py-2 bg-purple-800 text-white rounded"
             >
               Generate Link
             </button>
@@ -160,7 +160,7 @@ function CardForm({ card, onClose }) {
               />
               <button
                 onClick={handleCopy}
-                className="ml-2 p-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
+                className="ml-2 p-2 text-sm font-medium text-center text-white bg-purple-800 rounded-lg hover:bg-purple-950 focus:ring-4 focus:outline-none focus:ring-purple-300"
               >
                 <FaRegCopy />
               </button>
