@@ -118,12 +118,12 @@ function FilledCard() {
             <img src={image} alt=" inset-0 w-full h-full object-cover" />
           </div>
 
-          <div className="w-2/5 p-2  md:p-4 m-1 md:m-2 font-mono text-xs md:text-lg  text-zinc-800 border-2 border-dashed hfull-minus-1rem-ccss border-purple-950">
+          <div className="w-2/5 p-2 m-1 md:p-4  sm:m-2 font-mono text-xxs sm:text-xs md:text-base  lg:text-lg text-zinc-800 border-2 border-dashed hfull-minus-1rem-ccss border-purple-950">
             <p className="mb-1 sm:mb-4 ">
               <b>From: </b>
               {from}
             </p>
-            <p className="mb-1 sm:mb-4">
+            <p className=" mb-1 sm:mb-4">
               <b>TO: </b>
               {to}
             </p>
@@ -136,7 +136,7 @@ function FilledCard() {
         </div>
         <button
           onClick={openUp}
-          className="rounded-full w-12 h-12 cursor-pointer transition-transform transition-colors duration-800 hover:bg-pink transform hover:scale-150 absolute top-4 right-4"
+          className="rounded-full w-12 h-12 cursor-pointer transition-transform  duration-800 hover:bg-pink transform hover:scale-150 absolute top-4 right-4"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

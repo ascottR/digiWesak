@@ -130,6 +130,12 @@
     1;
 }
 
+/* custom css classes */
 .hfull-minus-1rem-ccss {
   height: calc(100% - 1rem);
+}
+
+.text-xxs {
+  font-size: 0.5rem /* 8px */;
+  line-height: 0.75rem /* 16px */;
 }
