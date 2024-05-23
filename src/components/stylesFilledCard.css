@@ -95,10 +95,6 @@
   font-size: inherit;
 }
 
-#letter img {
-  height: 50%;
-}
-
 #envelope button {
   display: block;
   z-index: 15;

@@ -9,20 +9,33 @@ export default function Landing() {
     {
       image:
         "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTVkaTU1OGx3M3E4cWQyZm1sNTgwaGVqenpuMG50aHFod3Rtc3F4dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3ohzdLTLt7f1usGJfW/giphy.gif",
-      name: "viber",
-      desc: "This is a description for Card 1. It gives more details about the card.",
+      name: "© Viber",
+      desc: "This is a gif uploaded on giphy by Viber on 2017.",
     },
     {
       image:
         "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3puaG1hcHRhZHd4djRlYXgxaXRucDAzYzE3bnFlMjdydnFlcXF4NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Sf53OQX1Gq66XuAGFa/giphy.gif",
-      name: "Sompo",
-      desc: "This is a description for Card 2. It gives more details about the card.",
+      name: "© Sompo Sg",
+      desc: "This is a gif uploaded on giphy by Sompo Singapore on 2021.",
     },
     {
       image:
-        "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmh5c281dHlsZzBodDJ4eDc5aGxwdnd3eW93cGMybW5hamZveTQ5bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6v0Mf9ufb2tT4rXD2G/giphy.gif",
-      name: "Acasia",
-      desc: "This is a description for Card 3. It gives more details about the card.",
+        "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWt2bDYybmk3bHUyaWRzbGNwMXRuMm1rZ2tiZDdqNmNoNmpwZ2V3MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1R9JHL8qdAuBHMCMJ8/giphy.gif",
+      name: "AI",
+      desc: "This is a © free image and created as a gif using a generative ai , gif maker.",
+      credits: "ascott",
+    },
+    {
+      image: "https://c.tenor.com/9RKWGb7GOzIAAAAC/tenor.gif",
+      name: "© Tenor 1",
+      desc: "This is a gif uploaded on Tenor",
+      credits: "ascott",
+    },
+    {
+      image: "https://c.tenor.com/Hkgn9vhNxYkAAAAC/tenor.gif",
+      name: "© Tenor 2",
+      desc: "This is a gif uploaded on Tenor",
+      credits: "ascott",
     },
   ];
 

@@ -57,6 +57,7 @@ function FilledCard() {
             height="100%"
             width="100%"
             viewBox="0 0 800 500"
+            preserveAspectRatio="xMidYMid slice"
           >
             <polygon
               points="0,100 800,100 800,500 0,500"
@@ -70,6 +71,7 @@ function FilledCard() {
             height="100%"
             width="100%"
             viewBox="0 0 800 500"
+            preserveAspectRatio="xMidYMid slice"
           >
             <polygon
               points="0,100 400,300 800,100 800,500 0,500"
@@ -83,6 +85,7 @@ function FilledCard() {
             height="100%"
             width="100%"
             viewBox="0 0 800 500"
+            preserveAspectRatio="xMidYMid slice"
           >
             <polygon
               points="0,100 400,300 0,500"
@@ -96,6 +99,7 @@ function FilledCard() {
             height="100%"
             width="100%"
             viewBox="0 0 800 500"
+            preserveAspectRatio="xMidYMid slice"
           >
             <polygon
               points="0,100 400,300 800,100"
@@ -114,8 +118,8 @@ function FilledCard() {
           </svg>
         </div>
         <div id="letter" className="bg-white rounded-lg shadow">
-          <div className="w-3/5">
-            <img src={image} alt=" inset-0 w-full h-full object-cover" />
+          <div className="w-3/5 inset-0 h-full object-cover">
+            <img src={image} alt="Vesak is Loading...." />
           </div>
 
           <div className="w-2/5 p-2 m-1 md:p-4  sm:m-2 font-mono text-xxs sm:text-xs md:text-base  lg:text-lg text-zinc-800 border-2 border-dashed hfull-minus-1rem-ccss border-purple-950">
