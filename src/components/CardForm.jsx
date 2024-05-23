@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaRegCopy } from "react-icons/fa"; // Import the copy icon from react-icons
+import axios from "axios"; // Import axios for HTTP requests
 
 function CardForm({ card, onClose }) {
   const [to, setTo] = useState("");
@@ -10,7 +11,7 @@ function CardForm({ card, onClose }) {
   const [fromError, setFromError] = useState(false);
   const [messageError, setMessageError] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (to.length > 25) {
       setToError(true);
@@ -27,13 +28,25 @@ function CardForm({ card, onClose }) {
       setMessageError(true);
       return;
     }
+
     const uniqueLink = `${
       window.location.origin
     }/cards?image=${encodeURIComponent(card.image)}&to=${encodeURIComponent(
       to
     )}&from=${encodeURIComponent(from)}&message=${encodeURIComponent(message)}`;
-    setGeneratedLink(uniqueLink);
-    alert(`Share this link: ${uniqueLink}`);
+
+    try {
+      const response = await axios.get(
+        `https://tinyurl.com/api-create.php?url=${encodeURIComponent(
+          uniqueLink
+        )}`
+      );
+      const shortUrl = response.data;
+      setGeneratedLink(shortUrl);
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Failed to generate short link");
+    }
   };
 
   const handleCopy = () => {
@@ -46,6 +59,7 @@ function CardForm({ card, onClose }) {
         console.error("Failed to copy: ", err);
       });
   };
+
   const handleToChange = (e) => {
     const input = e.target.value;
     if (input.length <= 25) {
@@ -55,6 +69,7 @@ function CardForm({ card, onClose }) {
       setToError(true);
     }
   };
+
   const handleMessageChange = (e) => {
     const input = e.target.value;
     const lines = input
@@ -124,7 +139,7 @@ function CardForm({ card, onClose }) {
               value={message}
               onChange={handleMessageChange}
               required
-              rows={6} // Set rows to 6 for maximum 6 lines
+              rows={6}
             ></textarea>
             {messageError && (
               <p className="text-red-500 text-xs mt-1">
