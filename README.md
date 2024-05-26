@@ -4,7 +4,7 @@
 
 Welcome to the **Digital Vesak Card Sharing and Creation App**! This project is a simple yet meaningful web application that allows users to create and share Vesak greeting cards, digitizing a cherished childhood tradition.
 
-![App Screenshot](path/to/your/screenshot.png)
+![App Screenshot](#Screenshots)
 
 ## Table of Contents
 - [Live Demo](#live-demo)
@@ -13,8 +13,6 @@ Welcome to the **Digital Vesak Card Sharing and Creation App**! This project is 
 - [Technologies Used](#technologies-used)
 - [Usage](#usage)
 - [Future Enhancements](#future-enhancements)
-- [Contributing](#contributing)
-- [License](#license)
 - [Contact](#contact)
 
 ## Live Demo
@@ -46,18 +44,23 @@ As children, many of us enjoyed exchanging Vesak greeting cards with friends, a 
 3. **Personalize the Card**: Enter the recipient's name, write a personalized message, and select a card style.
 4. **Share the Card**: Copy the shortened link provided and share it with your friends.
 
+
 ## Screenshots
 
 Here are some screenshots of the app:
 
 ### Home Page
-![Home Page](path/to/your/homepage-screenshot.png)
+![Home Page](SCreenshots/ssLand.png)
 
-### Card Creation Page
-![Card Creation Page](path/to/your/card-creation-screenshot.png)
+### Card Creation Form
+![Card Creation Page](SCreenshots/ccForm.png)
+
+### Envelope
+![Card Creation Page](SCreenshots/ccEnvelope.png)
 
 ### Share Card Page
-![Share Card Page](path/to/your/share-card-screenshot.png)
+![Share Card Page](SCreenshots/ssCard.png)
+
 
 ## Future Enhancements
 
@@ -72,6 +75,6 @@ This project is a work in progress. Here are some features planned for future re
 
 ## Contact
 
-Project Link: [https://github.com/yourusername/digital-vesak-card](https://github.com/yourusername/digital-vesak-card)
+Project Link: [https://github.com/ascottR/digital-vesak-card](https://github.com/ascottR/digiWesak)
 
 ---
