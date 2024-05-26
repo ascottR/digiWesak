@@ -11,31 +11,36 @@ export default function Landing() {
         "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTVkaTU1OGx3M3E4cWQyZm1sNTgwaGVqenpuMG50aHFod3Rtc3F4dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3ohzdLTLt7f1usGJfW/giphy.gif",
       name: "© Viber",
       desc: "This is a gif uploaded on giphy by Viber on 2017.",
+      attribution: "https://giphy.com/gifs/viber-vesak-day-3ohzdLTLt7f1usGJfW",
     },
     {
       image:
         "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3puaG1hcHRhZHd4djRlYXgxaXRucDAzYzE3bnFlMjdydnFlcXF4NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Sf53OQX1Gq66XuAGFa/giphy.gif",
       name: "© Sompo Sg",
       desc: "This is a gif uploaded on giphy by Sompo Singapore on 2021.",
+      attribution: "https://giphy.com/somposingapore",
     },
     {
       image:
         "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWt2bDYybmk3bHUyaWRzbGNwMXRuMm1rZ2tiZDdqNmNoNmpwZ2V3MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1R9JHL8qdAuBHMCMJ8/giphy.gif",
       name: "AI",
       desc: "This is a © free image and created as a gif using a generative ai , gif maker.",
-      credits: "ascott",
+      attribution: "#",
     },
     {
       image: "https://c.tenor.com/9RKWGb7GOzIAAAAC/tenor.gif",
       name: "© Tenor 1",
+      attribution:
+        "https://tenor.com/en-GB/view/happy-birthday-buddha-buddha-बुद्धजयन्ती-วิสาขบูชา-buddha-purnima-gif-21610356",
+
       desc: "This is a gif uploaded on Tenor",
-      credits: "ascott",
     },
     {
       image: "https://c.tenor.com/Hkgn9vhNxYkAAAAC/tenor.gif",
       name: "© Tenor 2",
       desc: "This is a gif uploaded on Tenor",
-      credits: "ascott",
+      attribution:
+        "https://tenor.com/en-GB/view/happy--buddha-buddha-बुद्धजयन्ती-วิสาขบูชา-buddha-purnima-gif-21610351",
     },
   ];
 
@@ -51,6 +56,7 @@ export default function Landing() {
               key={index}
               img={card.image}
               title={card.name}
+              attribution={card.attribution}
               description={card.desc}
               onSelect={() => setSelectedCard(card)}
             />
